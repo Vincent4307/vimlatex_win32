@@ -1,15 +1,3 @@
-function! Compile_Tex()
-    execute 'cd %:p:h'
-    execute '!start  xelatex --src-specials --synctex=1 %:p:t'
-endfunction
-
-function! View_Tex()
-    execute 'cd %:p:h'
-    execute '!start  d:/program/sumatrapdf/sumatrapdf %:r.pdf'
-endfunction
-
-:map ,ll :call Compile_Tex()<CR>
-:map ,lv :call View_Tex()<CR>
 
 if !exists('s:doneMappings')
 	let s:doneMappings = 1
